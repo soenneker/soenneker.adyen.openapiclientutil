@@ -1,20 +1,19 @@
 using Soenneker.Adyen.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Adyen.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class AdyenOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class AdyenOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly IAdyenOpenApiClientUtil _openapiclientutil;
 
-    public AdyenOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public AdyenOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<IAdyenOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
