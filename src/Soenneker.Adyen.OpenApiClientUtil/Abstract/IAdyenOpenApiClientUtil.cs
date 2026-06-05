@@ -10,5 +10,10 @@ namespace Soenneker.Adyen.OpenApiClientUtil.Abstract;
 /// </summary>
 public interface IAdyenOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
+    /// <summary>
+    /// Gets the value.
+    /// </summary>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A task containing the result of the operation.</returns>
     ValueTask<AdyenOpenApiClient> Get(CancellationToken cancellationToken = default);
 }
