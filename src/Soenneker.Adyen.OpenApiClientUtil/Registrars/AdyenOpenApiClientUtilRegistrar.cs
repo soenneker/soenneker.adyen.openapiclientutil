@@ -11,7 +11,7 @@ namespace Soenneker.Adyen.OpenApiClientUtil.Registrars;
 public static class AdyenOpenApiClientUtilRegistrar
 {
     /// <summary>
-    /// Adds <see cref="AdyenOpenApiClientUtil"/> as a singleton service. <para/>
+    /// Adds <see cref="IAdyenOpenApiClientUtil"/> as a singleton service backed by the singleton HTTP-client provider.
     /// </summary>
     public static IServiceCollection AddAdyenOpenApiClientUtilAsSingleton(this IServiceCollection services)
     {
@@ -22,7 +22,7 @@ public static class AdyenOpenApiClientUtilRegistrar
     }
 
     /// <summary>
-    /// Adds <see cref="AdyenOpenApiClientUtil"/> as a scoped service. <para/>
+    /// Adds <see cref="IAdyenOpenApiClientUtil"/> as a scoped service backed by the singleton HTTP-client provider.
     /// </summary>
     public static IServiceCollection AddAdyenOpenApiClientUtilAsScoped(this IServiceCollection services)
     {
