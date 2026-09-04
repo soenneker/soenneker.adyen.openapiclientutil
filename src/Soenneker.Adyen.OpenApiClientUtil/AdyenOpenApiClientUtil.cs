@@ -14,6 +14,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Adyen.OpenApiClientUtil;
 
+/// <inheritdoc cref="IAdyenOpenApiClientUtil" />
 public sealed class AdyenOpenApiClientUtil : IAdyenOpenApiClientUtil
 {
     private readonly AsyncSingleton<AdyenOpenApiClient> _client;
