@@ -25,7 +25,7 @@ public sealed class AdyenOpenApiClientUtil : IAdyenOpenApiClientUtil
         {
             HttpClient httpClient = await httpClientUtil.Get(token).NoSync();
 
-            var apiKey = configuration.GetValueStrict<string>("Adyen:ApiKey");
+            var apiKey = configuration.GetStringStrict("Adyen:ApiKey");
             string authHeaderName = configuration["Adyen:AuthHeaderName"] ?? "Authorization";
             string authHeaderValueTemplate = configuration["Adyen:AuthHeaderValueTemplate"] ?? "Bearer {token}";
             string authHeaderValue = authHeaderValueTemplate.Replace("{token}", apiKey, StringComparison.Ordinal);
