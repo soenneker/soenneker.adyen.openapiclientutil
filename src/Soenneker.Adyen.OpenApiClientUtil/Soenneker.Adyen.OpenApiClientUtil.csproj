@@ -45,6 +45,6 @@
     <ItemGroup>
         <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.56" />
         <PackageReference Include="Soenneker.Adyen.HttpClients" Version="4.0.145" />
-        <PackageReference Include="Soenneker.Adyen.OpenApiClient" Version="4.0.90" />
+        <PackageReference Include="Soenneker.Adyen.OpenApiClient" Version="4.0.91" />
     </ItemGroup>
 </Project>
